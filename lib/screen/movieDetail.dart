@@ -71,7 +71,7 @@ class _MovieDetailState extends State<MovieDetail> {
                                 Text(
                                   "${widget.models.originalTitle}",
                                   style: TextStyle(
-                                    fontSize: 24,
+                                    fontSize: 30,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -79,7 +79,7 @@ class _MovieDetailState extends State<MovieDetail> {
                                   "Category Movie | 2 Hours",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    color: Colors.grey,
+                                    color: Colors.grey[300],
                                   ),
                                 ),
                                 SizedBox(
@@ -95,7 +95,7 @@ class _MovieDetailState extends State<MovieDetail> {
                                         Text(
                                           "Rating",
                                           style: TextStyle(
-                                            color: Colors.grey,
+                                            color: Colors.grey[300],
                                           ),
                                         ),
                                       ],
@@ -106,7 +106,7 @@ class _MovieDetailState extends State<MovieDetail> {
                                         Text(
                                           "VoteCount",
                                           style: TextStyle(
-                                            color: Colors.grey,
+                                            color: Colors.grey[300],
                                           ),
                                         ),
                                       ],
@@ -117,7 +117,7 @@ class _MovieDetailState extends State<MovieDetail> {
                                         Text(
                                           "Popularity",
                                           style: TextStyle(
-                                            color: Colors.grey,
+                                            color: Colors.grey[300],
                                           ),
                                         ),
                                       ],
@@ -131,6 +131,18 @@ class _MovieDetailState extends State<MovieDetail> {
                       ],
                     ),
                   ),
+                  Container(
+                    child: AppBar(
+                      backgroundColor: Colors.transparent,
+                      elevation: 0,
+                      actions: [
+                        Icon(
+                          Icons.bookmark_border,
+                          size: 35,
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -139,12 +151,27 @@ class _MovieDetailState extends State<MovieDetail> {
             ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
-                "${widget.models.overview}",
-                style: TextStyle(
-                  color: Colors.grey[200],
-                  fontSize: 18,
-                ),
+              child: Column(
+                children: [
+                  Text(
+                    "${widget.models.overview}",
+                    textAlign: TextAlign.justify,
+                    maxLines: 5,
+                    style: TextStyle(
+                      color: Colors.grey[300],
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text("Readmore"),
+                      Icon(Icons.arrow_drop_down),
+                    ],
+                  ),
+                ],
               ),
             ),
             SizedBox(
