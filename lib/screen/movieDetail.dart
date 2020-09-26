@@ -167,7 +167,7 @@ class _MovieDetailState extends State<MovieDetail> {
                   ),
                   Row(
                     children: [
-                      Text("Readmore"),
+                      Text("Read more"),
                       Icon(Icons.arrow_drop_down),
                     ],
                   ),
